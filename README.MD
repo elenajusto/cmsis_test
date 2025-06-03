@@ -5,4 +5,4 @@ Welcome to CMSIS test. Here I am trying to get a more holistic understanding of 
 ## Architecture
 Here is diagram showing how I am hoping to organise software architecture.
 
-![alt text](docs\images\architecture.png "Architecture Diagram")
+![alt text](https://github.com/elenajusto/cmsis_test/blob/main/docs/images/architecture.png "Architecture Diagram")
