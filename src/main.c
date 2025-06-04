@@ -6,6 +6,10 @@
 #define LED_PORT GPIOA
 #define LED_PIN  5
 
+void notUsed(){
+    int localUnused;
+};
+
 // =======================
 // Function Prototypes
 // =======================
