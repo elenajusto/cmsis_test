@@ -58,7 +58,7 @@ void setup(void) {
 // =======================
 int main(void) {
     setup();
-
+    undefined_function(); // <-- intentionally trigger a link-time error
     while (1) {
         ms_delay(1500);
         LED_PORT->ODR ^= (1 << LED_PIN); // Toggle LED
