@@ -8,19 +8,19 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/elena/OneDrive/Documents/Repos/cmsis_test/include",
-                "C:/Users/elena/OneDrive/Documents/Repos/cmsis_test/src",
-                "C:/Users/elena/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
-                "C:/Users/elena/.platformio/packages/framework-cmsis-stm32f4/Include",
+                "/root/repos/cmsis_test/include",
+                "/root/repos/cmsis_test/src",
+                "/root/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
+                "/root/.platformio/packages/framework-cmsis-stm32f4/Include",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/elena/OneDrive/Documents/Repos/cmsis_test/include",
-                    "C:/Users/elena/OneDrive/Documents/Repos/cmsis_test/src",
-                    "C:/Users/elena/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
-                    "C:/Users/elena/.platformio/packages/framework-cmsis-stm32f4/Include",
+                    "/root/repos/cmsis_test/include",
+                    "/root/repos/cmsis_test/src",
+                    "/root/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
+                    "/root/.platformio/packages/framework-cmsis-stm32f4/Include",
                     ""
                 ]
             },
@@ -33,7 +33,7 @@
                 "F_CPU=84000000L",
                 ""
             ],
-            "compilerPath": "C:/Users/elena/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "/root/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc",
             "compilerArgs": [
                 "-mthumb",
                 "-mcpu=cortex-m4",
