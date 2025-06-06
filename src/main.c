@@ -58,7 +58,10 @@ void setup(void) {
 // =======================
 int main(void) {
     setup();
-    undefined_function(); // <-- intentionally trigger a link-time error
+    
+    int* bad_ptr = (int*)0x12345678U;
+    int value = *bad_ptr; // likely fine in linter but may fail if used oddly
+
     while (1) {
         ms_delay(1500);
         LED_PORT->ODR ^= (1 << LED_PIN); // Toggle LED
