@@ -12,6 +12,7 @@
                 "/root/repos/cmsis_test/src",
                 "/root/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
                 "/root/.platformio/packages/framework-cmsis-stm32f4/Include",
+                "/root/repos/cmsis_test/.pio/libdeps/dev/Unity/src",
                 ""
             ],
             "browse": {
@@ -21,6 +22,7 @@
                     "/root/repos/cmsis_test/src",
                     "/root/.platformio/packages/framework-cmsis@2.50501.200527/CMSIS/Include",
                     "/root/.platformio/packages/framework-cmsis-stm32f4/Include",
+                    "/root/repos/cmsis_test/.pio/libdeps/dev/Unity/src",
                     ""
                 ]
             },
