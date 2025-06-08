@@ -19,7 +19,7 @@ void rcc_setup(void) {
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 }
 
-/* Main Loop */
+/* Program Entry Point */
 int main(void) {
 
     // Enable clock to GPIOA
@@ -28,6 +28,7 @@ int main(void) {
     // Configure PA5 as output
     gpio_init_output(LED_PORT, LED_PIN);
 
+    /* Main Loop */
     while (1) {
         ms_delay(1500);
         LED_PORT->ODR ^= (1 << LED_PIN); // Toggle LED
