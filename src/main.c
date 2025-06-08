@@ -1,8 +1,5 @@
 #include "nucleof4.h"
-
-/* Function Prototypes */
-void gpio_init_output(GPIO_TypeDef *port, uint32_t pin);
-void ms_delay(int ms);
+#include "baremetal/io.h"
 
 /* Delay */
 void ms_delay(int ms) {
@@ -13,33 +10,24 @@ void ms_delay(int ms) {
     }
 }
 
-/* Set GPIO to output */
-void gpio_init_output(GPIO_TypeDef *port, uint32_t pin) {
-    // 1. Clear mode bits
-    port->MODER &= ~(0x3 << (pin * 2));
-    // 2. Set mode to '01' (general purpose output)
-    port->MODER |=  (0x1 << (pin * 2));
+/* Setup Clocks*/
+void rcc_setup(void) {
+    // Enable clock to GPIOA
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
 
-    // Optional: Output type = push-pull (0)
-    port->OTYPER &= ~(1 << pin);
-
-    // Optional: Output speed = high speed (11)
-    port->OSPEEDR |= (0x3 << (pin * 2));
-
-    // Optional: No pull-up, pull-down (00)
-    port->PUPDR &= ~(0x3 << (pin * 2));
+    // Enable clock to GPIOC
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 }
-
 
 /* Main Loop */
 int main(void) {
 
     // Enable clock to GPIOA
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+    rcc_setup();
 
     // Configure PA5 as output
     gpio_init_output(LED_PORT, LED_PIN);
-    
+
     while (1) {
         ms_delay(1500);
         LED_PORT->ODR ^= (1 << LED_PIN); // Toggle LED

@@ -1,3 +1,6 @@
+#ifndef NUCLEOF4_H
+#define NUCLEOF4_H
+
 #include "stm32f4xx.h"
 
 /* 
@@ -84,3 +87,5 @@
 
 #define A0_PORT GPIOA   // ADC1/0
 #define A0_PIN 0
+
+#endif
