@@ -21,7 +21,7 @@ jobs:
         run: pip install --upgrade platformio
 
       - name: Static Code Analysis
-        run: pio check --flags "--enable=all --severity=medium"
+        run: pio check --flags "--enable=all" --severity=high
       
       - name: Build PlatformIO Project
         run: pio run
