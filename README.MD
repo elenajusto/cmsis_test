@@ -13,8 +13,9 @@ Here is diagram showing how I am hoping to organise software architecture.
 
 The CMSIS documentation says you need 4 files to use it, these are:
 1. Startup File
-2. System Configuration Files
-3. Device Header File
+2. System Configuration Header
+3. System Configuration Source
+4. Device Header File
 
 Digging through the Platform.io header includes, I have located each one:
 1. ".platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f401xe.S"
