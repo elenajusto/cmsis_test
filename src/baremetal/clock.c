@@ -8,8 +8,6 @@
 *
 */
 void rcc_system_setup(void) {
-
-
     // ENABLE HSE and wait for the HSE to become Ready
     RCC->CR |= RCC_CR_HSEON;
     while (!(RCC->CR & (1U << 17))) {
