@@ -10,3 +10,25 @@ Here is diagram showing how I am hoping to organise software architecture.
 ## CMSIS and Platform.io
 
 ![alt text](https://github.com/elenajusto/cmsis_test/blob/feature/io/docs/images/cmsis.png "CMSIS Diagram")
+
+The CMSIS documentation says you need "3" files to using it, these are:
+1. Startup File
+2. System Configuration Files
+3. Device Header File
+
+Digging through the Platform.io header includes, I have located each one:
+1.0 .platformio/packages/framework-cmsis-stm32f4/Source/Templates/gcc/startup_stm32f401xe.S
+2.1 .platformio/packages/framework-cmsis-stm32f4/Include/system_stm32f4xx.h
+2.2 .platformio/packages/framework-cmsis-stm32f4/Source/Templates/system_stm32f4xx.c
+3.0 .platformio/packages/framework-cmsis-stm32f4/Include/stm32f401xe.h
+
+So what are each of these files?
+1.1 -> STM32F401xExx Devices vector table for GCC based toolchains. 
+The documentation says this is meant to contain "reset handler and exception vectors."
+
+2.1 -> CMSIS Cortex-M4 Device System Source File for STM32F4xx devices.
+2.2 -> CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.
+The documentation says this is meant to contain "general device configuration (i.e. for clock and BUS setup)."
+
+3.0 -> CMSIS STM32F401xE Device Peripheral Access Layer Header File.
+The documentation says this is meant to contain "gives access to processor core and all peripherals."
