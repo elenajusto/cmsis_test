@@ -27,6 +27,9 @@ So what are each of these files?
 
 1. **STM32F401xExx Devices vector table for GCC based toolchains.**
 - The documentation says this is meant to contain **"reset handler and exception vectors."**
+- For us this is provided in a compiled assembly format, it executes before the application code main().
+- It sets up the stack pointer, interrupt vector table and initialises the memory regions for the C runtime.
+- Application code main() is what is referred to as the "C runtime"
 
 2. **CMSIS Cortex-M4 Device System Source File for STM32F4xx devices.**
 
